@@ -1,0 +1,10 @@
+This repository holds scripts to perform Probabilistic Fault Displacement Hazard Analysis (PFDHA) [ongoing effort] 
+
+Folder description:
+	Gen_Profiles_WD: Contains Matlab files for generation of slip profiles in the wave-number domain
+
+
+References:
+	Lavrentiadis G. & Abrahamson A. " Generation of Surface Fault Rupture Profiles in the Wavenumber
+	Domain." Bulletin of the Seismological Society of America  (submitted – under review)
+
