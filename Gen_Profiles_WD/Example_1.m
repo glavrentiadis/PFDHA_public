@@ -1,5 +1,5 @@
 %% Example 1
-% Gerenrate rupture profiles for 40km rupture with 1.5m average slip
+% Generate rupture profiles for 40km rupture with 1.5m average slip
 close all
 clear 
 

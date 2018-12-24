@@ -10,19 +10,19 @@ function [dist_array,disp_gen_all,iter2pass,k2s,C2s_all] = CreateDispProfLogistP
 %   mu:			  center of logistic distribution
 %   s:			  scale of logistic distribution
 %   nprof:		  number of profiles to be generated
-%   th2acpt:      threshold criterial for acceptance
+%   th2acpt:      threshold criteria for acceptance
 %         th2acpt(1): maximum ratio of slip at the edge to average slip to be accepted
 %         th2acpt(1): maximum ratio of negative slip to be accepted
 % Output Arguments
 %   dist_array:   distance array (same as input)
 %   disp_gen_all: all generated slip profiles
 %   iter2pass:    number of iterations to generate each profile
-%   k2s:          2-sided wavenumber array of genrated profiles
+%   k2s:          2-sided wavenumber array of generated profiles
 %   C2s_all:      2-sided complex Fourier coefficient array of gen. profiles
 
-%amplitude ratio for siginficant wavenumbers
+%amplitude ratio for significant wavenumbers
 ratio_sig = 0.02; 
-%number of iterations before interuption
+%number of iterations before interruption
 limit_iters = 5000;
 limit_iters_ns = 1000;
 
@@ -72,7 +72,7 @@ for j = 1:nprof
                 continue
             end
             
-            %generate slip profile siginficant wavenumbers
+            %generate slip profile significant wavenumbers
 			dist_s = linspace(0,srl,length(k2s_s)+1)';
             dx_s = dist_s(2);
             disp_gen_s = ifft(ifftshift(C2s_s))*length(k2s_s)*dk;
@@ -120,7 +120,7 @@ for j = 1:nprof
                 continue
             end
             
-            %generate slip profile siginficant wavenumbers
+            %generate slip profile significant wavenumbers
             disp_gen = ifft(ifftshift(C2s))*length(k2s)*dk;
             %disp_gen_s = invNUDFT_sine_cosine(f2s_s,C2s_s,dist_array);
             %area under slip in negative direction
@@ -153,7 +153,7 @@ for j = 1:nprof
         disp_gen_all(:,j) = [disp_gen;disp_gen(1)];
         C2s_all(:,j) = C2s;
     else
-        disp_gen_all(:,j) = nan(size(disp_array_gen));
+        disp_gen_all(:,j) = nan(size(dist_array));
         break
     end
 end
