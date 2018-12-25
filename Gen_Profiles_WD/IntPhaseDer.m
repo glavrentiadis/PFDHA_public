@@ -61,7 +61,11 @@ fphase = mod(fphase,2*pi);
 
 
 if abs(k_array(end)-1/(2*dx))<1e-9
-	fphase(end) = 0; %Nyquist wavenumber
+    if Fphase1s(end) > pi/2 && Fphase1s(end) <3*pi/2
+        Fphase1s(end) = pi;
+    else
+        Fphase1s(end) = 0; %Nyquist wavenumber
+    end
 elseif (k_array(end)>-1/(2*dx))<1e-4
 	assert(k_array(end)<=1/(2*dx),'Error. Invalid wavenumber')
 end
