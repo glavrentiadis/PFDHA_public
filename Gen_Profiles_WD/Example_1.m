@@ -23,7 +23,7 @@ st_fa = 0.265;
 mu = -125.6637;
 s = 28.9977;
 %global relationships
-% mu = -10^(2.097 + (log10(srl) - 1.6));
+% mu = -srl*pi;
 % s = 10^(1.493 + 0.996*(log10(srl) - 1.6))
 
 %disp. array
