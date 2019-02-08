@@ -15,7 +15,7 @@ Bk0 = 1.5*40;
 KC = 0.006907;
 Np = 1;
 %global relationships
-% KC = 10^(-2.031 -1.009*(log10(srl) - 1.6));
+% KC = 10^(-2.031 -1.0*(log10(srl) - 1.6));
 % Np = 1.236;
 st_fa = 0.265;
 
@@ -24,7 +24,7 @@ mu = -125.6637;
 s = 28.9977;
 %global relationships
 % mu = -srl*pi;
-% s = 10^(1.493 + 0.996*(log10(srl) - 1.6))
+% s = 10^(1.493 + 1.0*(log10(srl) - 1.6))
 
 %disp. array
 dist_array = (0:dx:srl)';

@@ -121,7 +121,7 @@ for j = 1:nprof
             end
             
             %generate slip profile significant wavenumbers
-            disp_gen = ifft(ifftshift(C2s))*length(k2s)*dk;
+            disp_gen = real(ifft(ifftshift(C2s)))*length(k2s)*dk;
             %disp_gen_s = invNUDFT_sine_cosine(f2s_s,C2s_s,dist_array);
             %area under slip in negative direction
 			area_negsp = -1*sum(disp_gen(disp_gen<0))*dx;
